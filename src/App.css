@@ -1,0 +1,74 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+  background: white;
+  padding: 0 10px;
+}
+
+
+main {
+  max-width: 300px;
+  height: 700px;
+  margin: 200px auto 0;
+  border-radius: 50% / 100px; /* Rayon asymétrique pour créer les demi-ronds en haut et en bas */
+  padding: 30px 10px 0px;
+  background-color: #d6ecf6;
+  color: black;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  }
+
+
+  .city-name {
+    font-size: 32px;
+  }
+
+  .country-name {
+    font-size: 24px;
+    font-style: italic;
+  }
+  
+  .temperature {
+    font-size: 32px; 
+    color: darkgray;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  .info-icon {
+      display: block;
+      width: 130px;
+      height: 130px;
+      margin: 0 auto;
+  }
+
+  .loader-container {
+    background-color: #e5f0f5;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 
+    visibility 0.4s ease-out,
+    opacity 0.4s ease-out;
+  }
+
+  .loader-container.active {
+    visibility: visible;
+    opacity: 1;
+  } 
