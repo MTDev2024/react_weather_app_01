@@ -1,4 +1,4 @@
-import {useEffect, useStat} from "react"
+import {useEffect, useState} from "react"
 import loader from "./assets/loader.svg"
 import "./App.css"
 import { useEffect } from "react"
@@ -10,7 +10,14 @@ function App() {
   const [weatherData, setWeatherData] = useState(null)
 
   useEffect(() => {
-    fetch(`http://api.airvisual.com/v2/nearest_city?key={{YOUR_API_KEY}}`)
+    fetch(`http://api.airvisual.com/v2/nearest_city?key=${APIKEY}`)
+    .then(response => {
+      console.log(response);
+      return response.json()
+    })
+    .then(data => {
+      console.log(data);
+    })
   }, [] )
 
   return (
