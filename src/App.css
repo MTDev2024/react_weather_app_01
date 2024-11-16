@@ -1,4 +1,6 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -9,7 +11,6 @@ body {
   background: white;
   padding: 0 10px;
 }
-
 
 main {
   max-width: 300px;
@@ -23,52 +24,53 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
-  }
+}
 
+.city-name {
+  font-size: 32px;
+}
 
-  .city-name {
-    font-size: 32px;
-  }
+.country-name {
+  font-size: 24px;
+  font-style: italic;
+}
 
-  .country-name {
-    font-size: 24px;
-    font-style: italic;
-  }
-  
-  .temperature {
-    font-size: 32px; 
-    color: darkgray;
-    font-weight: bold;
-    padding: 10px;
-  }
-  
-  .info-icon {
-      display: block;
-      width: 130px;
-      height: 130px;
-      margin: 0 auto;
-  }
+.temperature {
+  font-size: 36px;
+  color: darkgray;
+  font-weight: bold;
+  padding: 10px;
+}
 
-  .loader-container {
-    background-color: #e5f0f5;
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: 
-    visibility 0.4s ease-out,
-    opacity 0.4s ease-out;
-  }
+.info-icon {
+  display: block;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+}
 
-  .loader-container.active {
-    visibility: visible;
-    opacity: 1;
-  } 
+.loader-container {
+  background-color: #e5f0f5;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.loader-container.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.error-information {
+  margin-bottom: 20px;
+}
