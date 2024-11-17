@@ -74,3 +74,9 @@ main {
 .error-information {
   margin-bottom: 20px;
 }
+
+.humidity, .wind-speed, .wind-direction {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #555;
+}
