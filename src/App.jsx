@@ -70,13 +70,24 @@ function App() {
           <p className="city-name">{weatherData.city}</p>
           <p className="country-name">{weatherData.country}</p>
           <p className="temperature">{weatherData.temperature}°</p>
+          
           <div className="info-icon-container">
             <img src={`/icons/${weatherData.iconId}.svg`} className="info-icon" alt="weather icon" />
           </div>
-          <p className="humidity">Humidité : {weatherData.humidity}%</p>
-          <p className="wind-speed">Vent : {weatherData.windSpeed} km/h</p>
+
+          <p className="humidity">
+            <span className="label">Humidité : </span>
+            <span className="value">{weatherData.humidity}%</span>
+          </p>
+
+          <p className="wind-speed">
+            <span className="label">Vent : </span>
+            <span className="value">{weatherData.windSpeed}km/h</span>
+          </p>
+
           <p className="wind-direction">
-            Direction : {getWindDirection(weatherData.windDirection)}
+            <span className="label">Direction : </span>
+            <span className="value"> {getWindDirection(weatherData.windDirection)}</span>
           </p>
         </>
       )}
