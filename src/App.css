@@ -8,19 +8,26 @@
 
 body {
   font-family: Roboto, Helvetica, sans-serif;
-  background: white;
-  padding: 0 10px;
+  background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(157.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(135deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(90deg, rgb(195, 195, 195),rgb(228, 228, 228));
+  background-blend-mode: overlay, overlay, overlay, normal;
+  background-repeat: no-repeat; /* Empêche la répétition */
+  background-size: cover; /* Couvre tout l'écran */
+  background-position: center; /* Centre l'image */
+  height: 100vh; /* Fait que le fond occupe toute la hauteur de l'écran */
+  margin: 0; /* Supprime les marges */
+  padding: 0; /* Supprime le padding */
 }
+
 
 main {
   max-width: 400px;
   height: 600px;
   margin: 200px auto 0;
   padding: 30px 10px 0px;
-  background: rgb(30,30,32);
-  background: linear-gradient(90deg, rgba(30,30,32,1) 0%, rgba(36,36,47,0.9443978274903712) 34%, rgba(11,11,11,1) 62%); 
+ background-image: radial-gradient(circle at center center, transparent,rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 2px,transparent 2px, transparent 10px,rgb(33,33,33) 10px, rgb(33,33,33) 11px,transparent 11px, transparent 21px),repeating-linear-gradient(45deg, rgb(47,47,47) 0px, rgb(47,47,47) 4px,transparent 4px, transparent 8px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33)); 
   color: white;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -32,25 +39,27 @@ main {
 
 main:hover {
   border-color: transparent; /* Gardez la bordure transparente */
-  box-shadow: 0 0 0 5px rgba(0, 128, 255, 0.7); /* Simule une bordure colorée */
+  box-shadow: 0 0 0 5px rgba(86, 87, 88, 0.7); /* Simule une bordure colorée */
 }
 
 
 .city-name {
   padding-top: 30px;
-  font-size: 32px;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-color: rgb(88, 142, 187); 
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 
+  0 0 5px rgba(255, 255, 255, 0.8), 
+  0 0 10px rgba(255, 255, 255, 0.6),
+  0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .country-name {
-  font-size: 24px;
+  font-size: 28px;
   font-style: italic;
 }
 
 .temperature {
-  font-size: 36px;
+  font-size: 40px;
   color: darkgray;
   font-weight: bold;
   padding: 10px;
@@ -61,7 +70,17 @@ main:hover {
   width: 160px;
   height: 160px;
   margin: 0 auto;
+  transition: box-shadow 0.3s, transform 0.3s; /* Transition fluide */
 }
+
+.info-icon:hover {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.8)) 
+          drop-shadow(0 0 10px rgba(255, 255, 0, 0.6)) 
+          drop-shadow(0 0 20px rgba(255, 255, 0, 0.4));
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 
 .loader-container {
   background-color: #e5f0f5;
@@ -94,9 +113,14 @@ main:hover {
 .label {
   color: white; /* Couleur pour le label */
    font-weight: bold; /* Exemple pour mettre le texte en gras */
-   font-size: 1rem;
+   font-size: 1.3rem;
    font-weight: bold;
    margin: 0.5rem 0;
+   color: #0096ff; /* Bleu vif */
+      text-shadow: 
+        0 0 5px rgba(0, 150, 255, 0.8),
+        0 0 10px rgba(0, 150, 255, 0.6),
+        0 0 20px rgba(0, 150, 255, 0.4);
 }
 
 .value {
