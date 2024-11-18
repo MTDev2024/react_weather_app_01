@@ -13,13 +13,13 @@ body {
 }
 
 main {
-  max-width: 300px;
-  height: 700px;
+  max-width: 400px;
+  height: 600px;
   margin: 200px auto 0;
-  border-radius: 50% / 100px; /* Rayon asymétrique pour créer les demi-ronds en haut et en bas */
   padding: 30px 10px 0px;
-  background-color: #d6ecf6;
-  color: black;
+  background: rgb(30,30,32);
+  background: linear-gradient(90deg, rgba(30,30,32,1) 0%, rgba(36,36,47,0.9443978274903712) 34%, rgba(11,11,11,1) 62%); 
+  color: white;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ main:hover {
   padding-top: 30px;
   font-size: 32px;
   text-decoration-line: underline;
-  text-decoration-style: wavy; 
+  text-decoration-style: solid;
   text-decoration-color: rgb(88, 142, 187); 
 }
 
@@ -92,7 +92,7 @@ main:hover {
 
 
 .label {
-  color: blue; /* Couleur pour le label */
+  color: white; /* Couleur pour le label */
    font-weight: bold; /* Exemple pour mettre le texte en gras */
    font-size: 1rem;
    font-weight: bold;
@@ -100,7 +100,7 @@ main:hover {
 }
 
 .value {
-  color: green; /* Couleur pour le résultat */
+  color: rgb(255, 255, 255); /* Couleur pour le résultat */
   font-style: italic; /* Exemple pour mettre le texte en italique */
 }
 
